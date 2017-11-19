@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :experiences
   get 'welcome/home'
 
   get 'welcome/about'

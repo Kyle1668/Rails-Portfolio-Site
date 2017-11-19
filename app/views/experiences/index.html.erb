@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Experiences</h1>
+
+<div class="container-fluid p-0 ">
+
+  <div class="fademe">
+
+
+
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+          <div class="my-auto">
+            <h2 class="mb-5">Experience</h2>
+
+            <% @experiences.each do |experience| %>
+
+            <div class="resume-item d-flex flex-column flex-md-row mb-5">
+              <div class="resume-content mr-auto">
+                <h3 class="mb-0"><%= experience.title %></h3>
+                <div class="subheading mb-3"><%= experience.organization %> - <%= experience.location %></div>
+                <p>
+                 <%= experience.body.html_safe %>
+                </p>
+              </div>
+              <div class="resume-date text-md-right">
+                <span class="text-primary"><%= experience.date %> ></span>
+              </div>
+            </div>
+            <% end %>
+
+          </div>
+
+        </section>
+        </div>
+
+
+</div>
+
+<br>
+
+<%= link_to 'New Experience', new_experience_path %>
