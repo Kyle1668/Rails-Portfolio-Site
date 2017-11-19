@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :experiences
 
-  root 'welcome/home'
+  root 'welcome#home'
 
   get 'welcome/home'
 
